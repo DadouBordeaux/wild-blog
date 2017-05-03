@@ -14,7 +14,13 @@ class PostsController extends Controller {
     constructor() {
         super(Post)
     }
-
+    
+    find(req, res, next) {
+        // Get all documents and filter with queries string (req.query : ex. http://domain.ext/api/?query=string)
+        this.model.find({published: true}, (err, documents) => {
+            res.json(documents)
+        })
+    }
 }
 
 module.exports = PostsController
