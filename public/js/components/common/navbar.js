@@ -1,7 +1,20 @@
+import moment from 'moment';
+
 let navbar = {
     templateUrl: 'js/components/common/navbar.html',
-    controller: ['UsersService', '$state', function(UsersService, $state) {
+    controller: ['UsersService', '$state', '$interval', function(UsersService, $state, $interval) {
         'use strict'
+
+        this.addHour = () => {
+            //declare hour to be reuse in template with two way data binding
+            this.hour = moment();
+        }
+        //Call the function that declare hour each 1 second
+        $interval(this.addHour, 1000, [0]);
+
+
+
+
         angular.extend(this, {
             $onInit() {
                 UsersService.getCurrent().then((user) => {
