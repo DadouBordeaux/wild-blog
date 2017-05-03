@@ -8,6 +8,7 @@ import blogItem from './blogItem/blogItem'
 import blogItemMenu from './blogItem/blogItemMenu'
 import blogList from './blogList/blogList'
 import algoItem from './algo1/algo1'
+import algo2Item from './algo2/algo2'
 import 'angularjs-datepicker'
 
 
@@ -16,6 +17,7 @@ let blogModule = angular.module('app.blog', ['720kb.datepicker'])
     .component('blogItemMenu', blogItemMenu)
     .component('blogList', blogList)
     .component('algoItem', algoItem)
+    .component('algo2Item', algo2Item)
     .config(['$stateProvider', ($stateProvider, $urlRouterProvider, $locationProvider) => {
         /*
           Define a state with name 'blog' this state is abstract and url is empty (root of application)
@@ -30,6 +32,10 @@ let blogModule = angular.module('app.blog', ['720kb.datepicker'])
             .state('algo1', {
                 url: '/algo1',
                 template: '<algo-item></algo-item>'
+            })
+            .state('algo2', {
+                url: '/algo2',
+                template: '<algo2-item></algo2-item>'
             })
             .state('blog.list', {
                 url: '/',
