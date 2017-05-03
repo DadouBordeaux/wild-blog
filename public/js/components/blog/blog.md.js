@@ -23,6 +23,10 @@ let blogModule = angular.module('app.blog', [])
                 abstract: true,
                 templateUrl: 'js/components/blog/blog.html'
             })
+            .state('algo1', {
+                url: '/algo1',
+                template: '<name-list></name-list>'
+            })
             .state('blog.list', {
                 url: '/',
                 template: '<blog-list></blog-list>'
