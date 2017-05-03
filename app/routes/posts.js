@@ -10,7 +10,7 @@ module.exports = (app) => {
     let ctrl = new PostsController();
 
     //GET (for READ)  method
-    app.get('/posts', (req, res, next) => {
+    app.get('/posts/', (req, res, next) => {
         return ctrl.find(req, res, next)
     })
 
