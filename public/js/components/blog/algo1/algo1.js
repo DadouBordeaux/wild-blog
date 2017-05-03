@@ -8,7 +8,7 @@ let algoItem = {
         'use  strict'
 
 
-            let names = ["Love", "Your", "Face", "1"];
+            let names = ["Ryan", "Jimmy", "123", "4", "Cool Man"];
             this.namesSorted = [];
     
             names.forEach((name) => {

@@ -4,6 +4,9 @@ There are all depedencies (module)
 */
 import other from '../scss/other.scss'
 import style from '../scss/style.scss' //require style
+import 'angularjs-datepicker/src/css/angular-datepicker.css'
+
+
 
 import angular from 'angular'
 import angularUIRouter from 'angular-ui-router'

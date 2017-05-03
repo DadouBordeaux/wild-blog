@@ -5,6 +5,10 @@
     
         <!-- In general if it's not editable it's when this component is used in the blogList component -->
         <div class="card-content">
+            <!-- Display datepicker -->
+            <datepicker style="width: 250px;" date-format="yyyy-MM-dd" date-week-start-day="1">
+                <input placeholder="Date" class="datepicker" ng-model="date" type="text"/>
+            </datepicker>
             <!-- Display post.title if this component is not editable or editable and not in edit mode -->
             <span class="card-title" ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))">
               {{$ctrl.post.title}}
@@ -25,6 +29,14 @@
             <!-- Display this link, only if it's editable and not in edit mode, to change state to app.blog.list (go back) -->
             <a ng-if="$ctrl.editable && !$ctrl.editMode" ui-sref="blog.list">Close</a>
             <!-- Display these links, only if it's in edit mode  -->
+
+
+
+
+
+
+
+
             <a ng-if="$ctrl.editMode" ng-click="$ctrl.undo()" class="waves-effect"><i class="material-icons">undo</i></a>
             <a ng-if="$ctrl.editMode" ng-click="$ctrl.save()" class="waves-effect"><i class="material-icons">done</i></a>
             <!-- On click add or remove to bookmark this post -->

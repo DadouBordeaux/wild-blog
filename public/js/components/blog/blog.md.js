@@ -8,8 +8,10 @@ import blogItem from './blogItem/blogItem'
 import blogItemMenu from './blogItem/blogItemMenu'
 import blogList from './blogList/blogList'
 import algoItem from './algo1/algo1'
+import 'angularjs-datepicker'
 
-let blogModule = angular.module('app.blog', [])
+
+let blogModule = angular.module('app.blog', ['720kb.datepicker'])
     .component('blogItem', blogItem)
     .component('blogItemMenu', blogItemMenu)
     .component('blogList', blogList)
