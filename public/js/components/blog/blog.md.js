@@ -7,11 +7,13 @@ blog.item : nested state of state app.blog, display blog-item component with edi
 import blogItem from './blogItem/blogItem'
 import blogItemMenu from './blogItem/blogItemMenu'
 import blogList from './blogList/blogList'
+import algoItem from './algo1/algo1'
 
 let blogModule = angular.module('app.blog', [])
     .component('blogItem', blogItem)
     .component('blogItemMenu', blogItemMenu)
     .component('blogList', blogList)
+    .component('algoItem', algoItem)
     .config(['$stateProvider', ($stateProvider, $urlRouterProvider, $locationProvider) => {
         /*
           Define a state with name 'blog' this state is abstract and url is empty (root of application)
@@ -25,7 +27,7 @@ let blogModule = angular.module('app.blog', [])
             })
             .state('algo1', {
                 url: '/algo1',
-                template: '<name-list></name-list>'
+                template: '<algo-item></algo-item>'
             })
             .state('blog.list', {
                 url: '/',
